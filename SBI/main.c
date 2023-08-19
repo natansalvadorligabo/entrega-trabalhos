@@ -12,8 +12,8 @@ Deve-se utilizar pelo menos uma tabela (índice) auxiliar para a busca.
 #include "uteis.h"
 #define TRUE 1
 #define FALSE 0
-#define TAM 100
-#define INDEX_SIZE 10
+#define TAM 1000000
+#define INDEX_SIZE 1000
 
 typedef struct {
     int chave;
