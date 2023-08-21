@@ -1,9 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define TRUE 1
 #define FALSE 0
-#define TAM 100
+#define TAM 1000000
+#define INDEX_SIZE 1000
+
+void quicksort(int x[], int lb, int ub);
+void partition(int x[], int lb, int ub, int *j);
+int busca_sequencial(int colecao[], int tamanho, int key);
+void carrega_vetor_aleatorio(int colecao[], int tamanho, int qtd_digitos);
+void imprime_vetor(int colecao[], int tamanho);
 
 // QUICKSORT
 void quicksort(int x[], int lb, int ub){
@@ -18,7 +26,6 @@ void quicksort(int x[], int lb, int ub){
 
     quicksort(x, j+1, ub);          
 }
-
 
 void partition(int x[], int lb, int ub, int *j){
     int a, down, up, temp;
@@ -78,4 +85,3 @@ void imprime_vetor(int colecao[], int tamanho){
 		printf("[%d] - %d\n", i, colecao[i]);
 	}
 }
-
